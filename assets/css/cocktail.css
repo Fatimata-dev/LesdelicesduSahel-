@@ -1,55 +1,70 @@
 .navbar{
-background: orange; 
+background: #e96a21; 
    /*background-size: cover;*/
    margin-top: -16px;
    font-family: 'Dr Sugiyama', cursive;
-
+   color: white;
 }
-
 
 html, body{
 margin: 0;
+background: orange;
 }
 
-/*.ulist{
+.ulist{
 list-style-type: none;
 display: flex;
 padding: 30px;
 width: 90%;
 justify-content: space-between;
-z-index: 99;
-padding-top: 0;
-padding-bottom: 0;
-}*/
+
+}
 
 a{
     text-decoration: none;
-    color: #F95875;
+
     font-size: 20px;
 }
 .logo{
-border-radius: 50px;
-width: 40%;
+  margin-top: 10px;
+border-radius: 50%;
+width: 30%;
 }
 
-#liste{
-list-style-type: none;
-margin-top: -750px;
-
+.container-fluid{
+    width: 100%;
+    margin-top: -16px;
+   
+}
+.img{
+    width: 100%;
+   
 }
 
-#liste a{
+#presentation{
+
+text-align: center;
+margin-top: -600px;
 color: white;
-text-decoration: none;
+font-family: 'Dancing Script', cursive;
+font-size: 50px;  
 
 }
 
-.containerBody{
-
-width: 100%;
+#presentation2, #presentation3{
+    color: white;
+    font-family: 'Dancing Script', cursive;
+text-align: center;  
+font-size: 30px;  
 }
 
-.imgBissap{
-width: 100%;
+footer{
+  margin-top: 193px;
+}
 
+.card{
+	margin-top: 80px;
+}
+.row{
+  background:#e96a21 ;
 }
