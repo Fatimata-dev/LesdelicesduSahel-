@@ -2,23 +2,17 @@
 background: #e96a21; 
    /*background-size: cover;*/
    margin-top: -16px;
-   font-family: 'Dr Sugiyama', cursive;
+   font-family: 'arial', cursive;
    color: white;
 }
-
+.marge{
+  overflow: hidden;
+}
 html, body{
 margin: 0;
-background: orange;
+/*background: orange;*/
 }
 
-.ulist{
-list-style-type: none;
-display: flex;
-padding: 30px;
-width: 90%;
-justify-content: space-between;
-
-}
 
 a{
     text-decoration: none;
@@ -38,6 +32,7 @@ width: 30%;
 }
 .img{
     width: 100%;
+    
    
 }
 
@@ -66,6 +61,7 @@ footer{
 
 }
 
-.card{
+/*.card{
   top:317px;
 }
+*/
