@@ -2,10 +2,12 @@
 background: #e96a21; 
    /*background-size: cover;*/
    margin-top: -16px;
-   font-family: 'Dr Sugiyama', cursive;
+   font-family: 'arial', cursive;
    color: white;
 }
-
+.marge{
+  overflow: hidden;
+}
 html, body{
 margin: 0;
 background: orange;
