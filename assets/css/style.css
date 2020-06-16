@@ -10,6 +10,9 @@ background: #e96a21;
 }
 html, body{
 margin: 0;
+
+height: 100vh;
+
 /*background: orange;*/
 }
 
@@ -31,38 +34,47 @@ width: 30%;
    
 }
 .img{
-    width: 100%;
+width: 100%;
     
    
 }
 
-#presentation{
 
-text-align: center;
-margin-top: -600px;
-color: white;
-font-family: 'Sugiyama', cursive;
-font-size: 50px;  
-
-}
-
-#presentation2, #presentation3{
-    color: white;
-    font-family: 'Sugiyama', cursive;
-text-align: center;  
-font-size: 30px;  
-}
-
-footer{
-  margin-top: 193px;
-}
-.row{
-  background:#e96a21 ;
-
-}
 h1{
   text-align: center;
   color: #9E4633;
   font-family: 'Dr Sugiyama', cursive;
   padding-top: 10px;
+}
+
+footer{
+  background: #e96a21;
+  font-family: arial;
+  font-size: 20px;
+/*position: absolute;
+bottom: 0;
+width: 100%;*/
+  margin-top: 193px;
+}
+
+.page-footer a{
+  color: brown;
+}
+
+.footer-copyright a{
+  color: white;
+}
+
+.container{
+  justify-content: center;
+  align-items: center;
+}
+
+.centre{
+  margin: auto;
+
+}
+
+.btn-centre{
+  text-align: center;
 }

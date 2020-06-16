@@ -7,13 +7,13 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&display=swap" rel="stylesheet">
   <link rel="icon" type="image" href="assets/img/africa.png">
-    
+    <script src="https://kit.fontawesome.com/c53d86a718.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light navbar-light ">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="index.html">
         <div class="logoNav">
           <img src="assets/img/logo.PNG" class="logo">
         </div>
@@ -34,7 +34,8 @@
  </header>
  <main>  
   <h1>Me contacter</h1>
-<form>
+<div class="container">
+  <form class="col-md-6 centre">
   <div class="form-group">
     <label for="exampleFormControlInput1">Nom </label>
     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="John">
@@ -47,31 +48,38 @@
     <label for="exampleFormControlTextarea1">Message</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
-  <button type="button" class="btn btn-primary mx-auto " style="margin: auto" >Envoyer</button>
+  <div class="btn-centre">
+  <button type="button" class="btn btn-primary mx-auto" >Envoyer</button>
+    
+  </div>
 </form>
+</div>
 </main>
 
- <footer class="page-footer font-small blue py-4" style="background: #e96a21; font-family: arial;">
-  <div class=" text-center" style="font-size: 20px; ">
-    <a href="#" target="_blank" style="color: brown;"><i  class="fab fa-facebook"></i></a>
-    <a href="#" target="_blank" style="color: brown;"><i class="fab fa-instagram"></i></a>
-    <a href="#" target="_blank" style="color: brown;"><i class="fab fa-youtube"></i></a>
+ <footer class="page-footer font-small blue py-4">
+  <div class=" text-center">
+    <a href="#" target="_blank"><i  class="fab fa-facebook"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
 
   </div>
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-2" style="color: white">© 2020 Copyright:
-    <a style="color: white;"> Tout droit réservés </a>
-  <a href="contact.html" style="color: white">LesdelicesduSahel.fr</a>
+  <div class="footer-copyright text-center py-2 text-white">© 2020 Copyright:
+    <a> Tout droit réservés </a>
+  <a href="contact.html">LesdelicesduSahel.fr</a>
 
   </div>
   <div class="text-center">
-  <a href="https://www.legalplace.fr/guides/mentions-legales/" target="_blank" style="color: white">Mentions Légales</a>
+  <a href="https://www.legalplace.fr/guides/mentions-legales/" target="_blank" class="text-white">Mentions Légales</a>
   </div>
   <div class="text-center">
-  <a href="contact.html" style="color: white">Contact</a>
+  <a href="contact.html" class="text-white">Contact</a>
   </div>
   <!-- Copyright -->
 
 </footer>
+<!-- Footer -->
+<!-- <script src="delices.js"></script> -->
+
 </body>
 </html>
