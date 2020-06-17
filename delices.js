@@ -1,25 +1,34 @@
 let presentation = document.getElementById('presentation');
-let presentation2 = document.getElementById('presentation2');
-let presentation3 = document.getElementById('presentation3');
+let plats = document.getElementById('plats');
+let dessert = document.getElementById('dessert');
+let cocktail = document.getElementById('cocktail');
 
-function bonjour(){
-
-presentation.textContent = 'Les délices du Sahel vous souhaitent la bienvenue';
+function introduction(){
+presentation.textContent = "Ce blog de cuisine vous fera voyager à travers l'Afrique de l'Ouest";
 
 }
-setTimeout('bonjour()', 2000);
 
-function aPropos(){
+setTimeout('introduction()', 3000);
 
+function plat(){
+presentation.textContent = " Nous vous proposons plusieurs recettes, des bons petits plats tel que le Tieb et plus encore";
+plats.className = 'animate__animated animate__flash';
+}
+setTimeout('plat()', 6000);
 
-presentation2.textContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui laudantium vero magnam? Fugiat natus ab cupiditate incidunt aut exercitationem ea optio, molestias, odio corporis officia tempora quam nam numquam.';
+function desserts(){
+presentation.textContent = " Nos desserts ! Même pour les yeux, c'est un régal, essayez vous succomberez";
+dessert.className = 'animate__animated animate__flash';
+}
+setTimeout('desserts()', 9000);
 
-    }
-    setTimeout('aPropos()', 4000);
+function cocktails(){
+presentation.textContent = "Ici on ne boit pas, on savoure !";
+cocktail.className = 'animate__animated animate__flash';
+}
+setTimeout('cocktails()', 12000);
 
-    function signature(){
-
-        presentation3.textContent = 'By Fatimata & Oumou';
-        
-        }
-        setTimeout('signature()', 6000);   
+function fin(){
+	presentation.textContent = 'Quand y\'en a plus, y\'en a encore, suivez moi sur instagram pour encore plus de recettes !';
+}
+setTimeout('fin()', 14000);

@@ -45,6 +45,8 @@ h1{
   color: #9E4633;
   font-family: 'Dr Sugiyama', cursive;
   padding-top: 10px;
+  text-align: center;
+
 }
 
 footer{
@@ -59,6 +61,9 @@ width: 100%;*/
 
 .page-footer a{
   color: brown;
+}
+.page-footer{
+ margin-top: 0px;
 }
 
 .footer-copyright a{
@@ -77,5 +82,31 @@ width: 100%;*/
 
 .btn-centre{
   text-align: center;
-  
+ 
+}
+.bouton{
+box-shadow: none;
+display: inline-block;
+    font-weight: 400;
+    color: white;
+    background-color: #9e4633;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s
+}
+
+.animation{
+border: 2px solid white;
+
+}
+
+#presentation{
+  margin-top: 200px;
+  position: absolute;
+  color: white;
+  margin-left: 420px;
+  width: 500px;
 }
