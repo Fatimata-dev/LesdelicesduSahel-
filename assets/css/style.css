@@ -110,3 +110,6 @@ border: 2px solid white;
   margin-left: 420px;
   width: 500px;
 }
+.text-center a :hover{
+color: white;
+}
