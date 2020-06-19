@@ -104,12 +104,16 @@ border: 2px solid white;
 }
 
 #presentation{
-  margin-top: 200px;
+   top: 27%;
   position: absolute;
   color: white;
-  margin-left: 420px;
-  width: 500px;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 2;
 }
 .text-center a :hover{
 color: white;
+}
+.hero{
+  position: relative;
 }
