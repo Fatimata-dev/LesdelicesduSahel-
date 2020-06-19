@@ -29,6 +29,6 @@ cocktail.className = 'animate__animated animate__flash';
 setTimeout('cocktails()', 12000);
 
 function fin(){
-	presentation.textContent = 'Quand y\'en a plus, y\'en a encore, suivez moi sur instagram pour encore plus de recettes !';
+	presentation.textContent = 'Quand y\'en a plus, y\'en a encore, suivez moi sur Youtube pour encore plus de recettes !';
 }
 setTimeout('fin()', 14000);
