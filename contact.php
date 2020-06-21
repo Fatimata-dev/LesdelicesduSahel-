@@ -11,30 +11,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-expand-lg navbar-light navbar-light ">
-      <a class="navbar-brand" href="index.php">
-        <div class="logoNav">
-          <img src="assets/img/logo.PNG" class="logo">
-        </div>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-        <a class="nav-item nav-link text-white" href="index.php">Accueil</a>
-        <a class="nav-item nav-link text-white" href="plat.php">Plats</a>
-        <a class="nav-item nav-link text-white" href="dessert.php">Desserts</a>
-        <a class="nav-item nav-link text-white" href="cocktail.php">Cocktails</a>
-        <a class="nav-item nav-link text-white" href="contact.php">Contact</a>
-        </div>
-    </div>
-    </nav>
- </header>
+<?php include("inc/header.php") ?>;
  <main>  
   <h1>Me contacter</h1>
-<div class="container">
+<div class="container shadow">
   <form class="col-md-6 centre" action="" method="post">
   <div class="form-group">
     <label for="nom">Nom </label>
@@ -81,30 +61,7 @@ if ($connect) {
 </div>
 </main>
 
- <footer class="page-footer font-small blue py-4">
-  <div class=" text-center">
-    <a href="#" target="_blank"><i  class="fab fa-facebook"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-
-  </div>
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-2 text-white">© 2020 Copyright:
-    <a> Tout droit réservés </a>
-  <a href="contact.php">LesdelicesduSahel.fr</a>
-
-  </div>
-  <div class="text-center">
-  <a href="assets/img/mentionLegales.pdf" target="_blank" class="text-white">Mentions Légales</a>
-  </div>
-  <div class="text-center">
-  <a href="contact.php" class="text-white">Contact</a>
-  </div>
-  <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
-<!-- <script src="delices.js"></script> -->
+<?php include("inc/footer.php") ?>;
 
 </body>
 </html>

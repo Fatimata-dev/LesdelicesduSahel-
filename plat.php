@@ -15,80 +15,55 @@
  <div class="marge">
   
 <body>
-<header>
-    <nav class="navbar navbar-expand-lg navbar-light navbar-light ">
-      <a class="navbar-brand" href="index.php">
-        <div class="logoNav">
-          <img src="assets/img/logo.PNG" class="logo">
-        </div>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-       <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-        <a class="nav-item nav-link text-white" href="index.php">Accueil</a>
-        <a class="nav-item nav-link text-white" href="plat.php">Plats</a>
-        <a class="nav-item nav-link text-white" href="dessert.php">Desserts</a>
-        <a class="nav-item nav-link text-white" href="cocktail.php">Cocktails</a>
-        <a class="nav-item nav-link text-white" href="contact.php">Contact</a>
-        </div>
-    </div>
-    </nav>
- </header>
+<?php include("inc/header.php"); ?>
   <h1> Nos plats</h1>
+ <div class="container">
+<div class="row">
+<?php
 
-  <div class="card-deck mx-auto my-5">
-  <div class="card">
-    <img class="card-img-top" src="assets/img/plat1.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Poulet loco</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted"></small></p>
-    </div>
+include("config.php");
+$id= 'id';
+if ($connect) {
+    $query = "SELECT * FROM formulaire WHERE id=$id";
+    $result =mysqli_query($connect,$query);
+  }
+  
+    //$row = mysqli_fetch_array($result);
+    while ($row = mysqli_fetch_assoc($result)): 
+      
+   $image = $row['image'];
+    $image_src = "upload/".$image;
+    $titre = $row['titre'];
+    $message = $row['contenu'];
+    $categorie = $row['categorie'];
+    if($categorie == 'plat'):
+      
+      
+
+
+?>
+ 
+  
+ <div class="col-sm-4" style="width: 18rem;">
+
+<a href="article.php?<?php echo $row['id'];?>" name="lire" class="article">
+  <img src=" <?php echo  $image_src ?>" class="card-img-top img" alt="...">
+  
+  <div class="card-body">
+    <h5 class="card-title"><?php echo $titre ?></h5>
+    <p class="card-text"><?php echo $message ?></p>
+
   </div>
-  <div class="card">
-    <img class="card-img-top" src="assets/img/tieb1.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Tiebe</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted"></small></p>
-    </div>
+
+  </a>
   </div>
-  <div class="card">
-    <img class="card-img-top" src="assets/img/atieke1.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Tiéké</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted"></small></p>
-    </div>
-  </div>
+
+  <?php endif; ?>
+<?php endwhile; ?>
 </div>
+</div> 
+<?php include("inc/footer.php"); ?>
 
- <footer class="page-footer font-small blue py-4">
-  <div class=" text-center">
-    <a href="#" target="_blank"><i  class="fab fa-facebook"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-
-  </div>
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-2 text-white">© 2020 Copyright:
-    <a> Tout droit réservés </a>
-  <a href="contact.php">LesdelicesduSahel.fr</a>
-
-  </div>
-  <div class="text-center">
-  <a href="assets/img/mentionLegales.pdf" target="_blank" class="text-white">Mentions Légales</a>
-  </div>
-  <div class="text-center">
-  <a href="contact.php" class="text-white">Contact</a>
-  </div>
-  <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
-<!-- <script src="delices.js"></script> -->
 
 
 </body>

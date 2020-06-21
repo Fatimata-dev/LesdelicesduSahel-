@@ -5,6 +5,10 @@ background: #e96a21;
    font-family: 'arial', cursive;
    color: white;
 }
+.article{
+  text-decoration: none;
+  font-family: 'arial', cursive;
+}
 .marge{
   overflow: hidden;
 }
@@ -38,6 +42,10 @@ width: 100%;
     
    
 }
+.card{
+  width: 50%;
+  height: 30%;
+}
 
 
 h1{
@@ -48,6 +56,24 @@ h1{
   text-align: center;
 
 }
+.centre{
+    margin: auto;
+}
+.container input[type=submit]{
+    margin: 20px auto ;
+    display: block;
+  }
+  .form-group{
+    margin: 20px auto ;
+    display: block;
+  }
+  /* .container{
+      background-color:#e96a21 ;
+     
+  } */
+  .input-group{
+    margin: 20px auto ;
+  }
 
 footer{
   background: #e96a21;
