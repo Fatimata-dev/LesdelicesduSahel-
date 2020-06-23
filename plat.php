@@ -22,44 +22,43 @@
 <?php
 
 include("config.php");
-$id= 'id';
+
+ $id = 'id';
 if ($connect) {
-    $query = "SELECT * FROM formulaire WHERE id=$id";
+
+       $query = "SELECT titre,articles.id,contenu,image,categorie_id FROM articles inner join categories on articles.categorie_id=categories.id where articles.categorie_id=1";
     $result =mysqli_query($connect,$query);
-  }
+}  
   
-    //$row = mysqli_fetch_array($result);
     while ($row = mysqli_fetch_assoc($result)): 
       
    $image = $row['image'];
     $image_src = "upload/".$image;
     $titre = $row['titre'];
     $message = $row['contenu'];
-    $categorie = $row['categorie'];
-    if($categorie == 'plat'):
-      
-      
-
+    $categorie = $row['categorie_id'];
+  
 
 ?>
  
   
  <div class="col-sm-4" style="width: 18rem;">
 
-<a href="article.php?<?php echo $row['id'];?>" name="lire" class="article">
-  <img src=" <?php echo  $image_src ?>" class="card-img-top img" alt="...">
-  
+<a href="article.php?id=<?php echo $row['id']; ?>" name="lire" class="article">
+  <img src=" <?php echo  $image_src  ?>" class="card-img-top img" alt="...">
+  </a> 
   <div class="card-body">
     <h5 class="card-title"><?php echo $titre ?></h5>
     <p class="card-text"><?php echo $message ?></p>
 
   </div>
 
-  </a>
+ 
   </div>
 
-  <?php endif; ?>
+
 <?php endwhile; ?>
+
 </div>
 </div> 
 <?php include("inc/footer.php"); ?>

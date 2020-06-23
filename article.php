@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Plat principaux</title>
+<title>Les delices du Sahel </title>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -17,33 +17,36 @@
 <?php
 include("config.php");
 
-$id= 'id';
-if ($connect) {
-    $query = "SELECT * FROM formulaire WHERE id=$id";
+if (isset($_GET["id"])) {
+ 
+$id = $_GET["id"];
+
+    $query = "SELECT * FROM articles WHERE articles.id=$id";
     $result =mysqli_query($connect,$query);
-    //$row = mysqli_fetch_array($result);
-    while ($row = mysqli_fetch_assoc($result)){
+  }
+    while ($row = mysqli_fetch_assoc($result)) :
     $image = $row['image'];
     $image_src = "upload/".$image;
     $titre = $row['titre'];
     $message = $row['contenu'];
-    $categorie = $row['categorie'];
-    
+   // $categorie = $row['categorie'];
+
+    // if (isset($_GET["id"])){
+
+
 
    
-}
+
 
 
 
     
-} 
+
+//echo $query;
 
 ?>
- <?php 
- //if($_GET['']) :
 
-?>
- <input type="hidden" name="id" value="<?php echo $id; ?>">
+
 <h1 class="card-title"><?php echo $titre ?></h1>
 <div class="row">
 <div class=" col-md-4 card mb-3">
@@ -55,18 +58,10 @@ if ($connect) {
       <p class="card-text"><small class="text-muted"></small></p>
 </div>
 </div>
+<?php endwhile ?>
 </div>
 
-<!--  <div class="card">
-    <img class="card-img-top" src="<?php echo $image_src ?>" alt="Card image cap"> 
-    <div class="card-body">
-      <h5 class="card-title"><?php echo $titre ?></h5>
-      <p class="card-text"><?php echo $message ?>.</p>
-      <p class="card-text"><small class="text-muted"></small></p>
-    </div>
-  </div> -->
- <!-- 
-</div> -->
+
  <?php include('inc/footer.php'); ?> 
   </body>
 </html>

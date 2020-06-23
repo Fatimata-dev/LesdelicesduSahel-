@@ -18,15 +18,15 @@
   
 <body>
 <?php include("inc/header.php"); ?>
-  <h1> Nos plats</h1>
+  <h1> Nos Cocktails</h1>
  <div class="container">
 <div class="row">
 <?php
 
 include("config.php");
-$id= 'id';
+//$id= 'id';
 if ($connect) {
-    $query = "SELECT * FROM formulaire WHERE id=$id";
+       $query = "SELECT titre,articles.id,contenu,image,categorie_id FROM articles inner join categories on articles.categorie_id=categories.id where articles.categorie_id=3";
     $result =mysqli_query($connect,$query);
   }
   
@@ -37,8 +37,8 @@ if ($connect) {
     $image_src = "upload/".$image;
     $titre = $row['titre'];
     $message = $row['contenu'];
-    $categorie = $row['categorie'];
-    if($categorie == 'cocktail'):
+    $categorie = $row['categorie_id'];
+   // if($categorie == 'cocktail'):
       
       
 
@@ -48,20 +48,19 @@ if ($connect) {
   
  <div class="col-sm-4" style="width: 18rem;">
 
-<a href="article.php?<?php echo $row['id'];?>" name="lire">
+<a href="article.php?id=<?php echo $row['id']; ?>" name="lire">
   <img src=" <?php echo  $image_src ?>" class="card-img-top img" alt="...">
-  
+</a>  
   <div class="card-body">
     <h5 class="card-title"><?php echo $titre ?></h5>
     <p class="card-text"><?php echo $message ?></p>
 
   </div>
 
-  </a>
+  
   </div>
 
-  <?php endif; ?>
-<?php endwhile; ?>
+ <?php endwhile; ?>
 </div>
 </div> 
 <?php include("inc/footer.php"); ?>
